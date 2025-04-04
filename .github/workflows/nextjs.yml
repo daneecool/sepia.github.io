@@ -2,7 +2,7 @@
 #
 # To get started with Docusaurus see: https://docusaurus.io/docs
 #
-name: Deploy Docusaurus site to Pages
+name: Deploy Site
 
 on:
   # Runs on pushes targeting the default branch
