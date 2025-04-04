@@ -1,79 +1,52 @@
-name: Deploy Next.js site to Pages
+# Sample workflow for building and deploying a Docusaurus site to GitHub Pages
+#
+# To get started with Docusaurus see: https://docusaurus.io/docs
+#
+name: Deploy Docusaurus site to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ["development"]
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_ENV
-            echo "install_cmd=install" >> $GITHUB_ENV
-            echo "runner=yarn" >> $GITHUB_ENV
-          elif [ -f "package-lock.json" ]; then
-            echo "manager=npm" >> $GITHUB_ENV
-            echo "install_cmd=ci" >> $GITHUB_ENV
-            echo "runner=npx --no-install" >> $GITHUB_ENV
-          elif [ -f "pnpm-lock.yaml" ]; then
-            echo "manager=pnpm" >> $GITHUB_ENV
-            echo "install_cmd=install" >> $GITHUB_ENV
-            echo "runner=pnpm" >> $GITHUB_ENV
-          else
-            echo "Unable to detect package manager" >&2
-            exit 1
-          fi
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ env.manager }}
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
-
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml', '**/yarn.lock', '**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-
-
       - name: Install dependencies
-        run: ${{ env.manager }} ${{ env.install_cmd }}
-
-      - name: Build with Next.js
-        run: ${{ env.runner }} next build
-
-      - name: Export static files
-        run: ${{ env.runner }} next export
-
+        run: yarn install
+      - name: Add Google GTag Plugin
+        run: yarn add @docusaurus/plugin-google-gtag
+      - name: Build with Docusaurus
+        run: yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: build
 
+  # Deployment job
   deploy:
     environment:
       name: github-pages
