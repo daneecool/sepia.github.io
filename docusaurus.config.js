@@ -9,7 +9,7 @@ const config = {
   title: 'ルパンへようこそ',
   // tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/rupin.github.io/', // Update this to match your repository name
+  baseUrl: process.env.BASE_URL || '/rupin.github.io/', // Update this to match your repository name
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
