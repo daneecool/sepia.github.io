@@ -61,7 +61,7 @@ const config = {
         title: '🎵🎼 ルパン 🎤🎶',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/rupin.svg', // Update to use the static directory
+          src: 'img/logo.svg', // Update to use the static directory
         },
         items: [
           // {
