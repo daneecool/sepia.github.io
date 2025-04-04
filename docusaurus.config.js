@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'ルパンへようこそ',
+  // tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -16,15 +16,15 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // organizationName: 'facebook', // Usually your GitHub org/user name.
+  // projectName: 'docusaurus', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'jp',
+    locales: ['jp'],
   },
 
   presets: [
@@ -32,20 +32,21 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
+        blog: false,
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -57,65 +58,57 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: '🎵🎼 ルパン 🎤🎶',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/rupin.svg', // Update to use the static directory
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
+          // {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'マップ',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'カラオケ・喫茶　ルパン',
+                to: 'https://www.google.com/maps?q=〒851-0121 長崎県長崎市宿町２０−３',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '電話番号',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'ルパン　電話番号',
+                href: 'tel:095-838-4356', // Fixed the colon issue in "tel"
               },
             ],
           },
           {
-            title: 'More',
+            title: 'その他',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'カラオケ・セピア　浜口町店',
+                to: 'https://www.google.com/maps?q=8-2 Hamaguchimachi, Nagasaki, 852-8107, Japan',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'セピア　電話番号',
+                href: 'tel:090-2858-6768', // Fixed the colon issue in "tel"
               },
             ],
           },
@@ -125,6 +118,36 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      headTags: [
+        {
+          tagName: 'script',
+          attributes: {
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-X4C3WEWV1Z',
+          },
+        },
+        {
+          tagName: 'script',
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X4C3WEWV1Z');
+          `,
+        },
+        {
+          tagName: 'meta',
+          attributes: {
+            name: 'permissions-policy',
+            content: 'interest-cohort=()',
+          },
+        },
+      ],
+      colorMode: {
+        defaultMode: 'dark', // Set dark mode as the default
+        disableSwitch: false, // Allow users to switch between light and dark modes
+        respectPrefersColorScheme: false, // Ignore the user's system preference
       },
     }),
 };

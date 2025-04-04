@@ -4,42 +4,47 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '営業時間',
+    imgSrc: require('@site/src/components/Image/150x150_square_52218619.jpg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        月火水木金<br></br>
+        午後1時～午後５時<br></br>
+        午後7時～午後11時（予約）<br></br>
+        <br></br>
+        土日・祝日<br></br>
+        午前10時～午後５時（予約・レッスン）<br></br>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '営業案内',
+    imgSrc: require('@site/src/components/Image/150x150_square_52218628.jpg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        カラオケ歌い放題（昼1,100円　・　晩1,200円）<br></br>
+        コーヒー・お茶・ソフトドリンク　⁂1杯付き<br></br>
+        おつまみ・お菓子付き
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '店舗イベント情報',
+    imgSrc: require('@site/src/components/Image/150x150_square_52218634.jpg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        カラオケ大会・歌手イベントなど<br></br>
+        📌　イベント情報は店にお知らせ一覧をご覧ください。
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ imgSrc, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureImg} src={imgSrc} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
