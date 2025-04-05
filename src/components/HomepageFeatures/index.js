@@ -22,7 +22,7 @@ const FeatureList = [
     imgSrc: require('@site/src/components/Image/150x150_square_52218628.jpg').default,
     description: (
       <>
-        カラオケ歌い放題（昼1,100円　・　晩1,200円）<br></br>
+        カラオケ歌い放題（1,200円）<br></br>
         コーヒー・お茶・ソフトドリンク　⁂1杯付き<br></br>
         おつまみ・お菓子付き
       </>
