@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: '営業時間',
-    imgSrc: require('@site/src/components/Image/150x150_square_52218619.jpg').default,
+    imgSrc: require('@site/src/components/Image/Rupin.jpg').default,
     description: (
       <>
         月火水木金<br></br>
@@ -19,7 +19,7 @@ const FeatureList = [
   },
   {
     title: '営業案内',
-    imgSrc: require('@site/src/components/Image/150x150_square_52218628.jpg').default,
+    imgSrc: require('@site/src/components/Image/Table.jpg').default,
     description: (
       <>
         カラオケ歌い放題（1,200円）<br></br>
@@ -30,7 +30,7 @@ const FeatureList = [
   },
   {
     title: '店舗イベント情報',
-    imgSrc: require('@site/src/components/Image/150x150_square_52218634.jpg').default,
+    imgSrc: require('@site/src/components/Image/Chair.jpg').default,
     description: (
       <>
         カラオケ大会・歌手イベントなど<br></br>
