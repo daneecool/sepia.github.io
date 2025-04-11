@@ -107,7 +107,7 @@ const config = {
                 to: 'https://www.google.com/maps?q=〒851-0121 長崎県長崎市宿町２０−３',
               },
               {
-                label: 'カラオケ　喫茶ルパン',
+                label: 'カラオケ　喫茶ルパン 電話番号',
                 href: 'tel:095-838-4356', // Fixed the colon issue in "tel"
               },
             ],
