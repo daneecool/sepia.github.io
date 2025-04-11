@@ -6,10 +6,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ルパンへようこそ',
+  title: 'セピアへようこそ',
   // tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: process.env.BASE_URL || '/rupin.github.io/', // Update this to match your repository name
+  baseUrl: process.env.BASE_URL || '/sepia.github.io/', // Update this to match your repository name
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -58,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '🎵🎼 ルパン 🎤🎶',
+        title: '🎵🎼 セピア 🎤🎶',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg', // Update to use the static directory
@@ -85,8 +85,8 @@ const config = {
             title: 'マップ',
             items: [
               {
-                label: 'カラオケ・喫茶　ルパン',
-                to: 'https://www.google.com/maps?q=〒851-0121 長崎県長崎市宿町２０−３',
+                label: 'カラオケセピア SEPIA',
+                to: 'https://www.google.com/maps?q=〒852-8107 長崎県長崎市浜口町８−２３',
               },
             ],
           },
@@ -94,8 +94,8 @@ const config = {
             title: '電話番号',
             items: [
               {
-                label: 'ルパン　電話番号',
-                href: 'tel:095-838-4356', // Fixed the colon issue in "tel"
+                label: 'セピア　電話番号',
+                href: 'tel:090-2858-6768', // Fixed the colon issue in "tel"
               },
             ],
           },
@@ -103,12 +103,12 @@ const config = {
             title: 'その他',
             items: [
               {
-                label: 'カラオケ・セピア　浜口町店',
-                to: 'https://www.google.com/maps?q=8-2 Hamaguchimachi, Nagasaki, 852-8107, Japan',
+                label: 'カラオケ　喫茶ルパン',
+                to: 'https://www.google.com/maps?q=〒851-0121 長崎県長崎市宿町２０−３',
               },
               {
-                label: 'セピア　電話番号',
-                href: 'tel:090-2858-6768', // Fixed the colon issue in "tel"
+                label: 'カラオケ　喫茶ルパン',
+                href: 'tel:095-838-4356', // Fixed the colon issue in "tel"
               },
             ],
           },

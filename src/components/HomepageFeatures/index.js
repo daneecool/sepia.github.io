@@ -5,36 +5,35 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: '営業時間',
-    imgSrc: require('@site/src/components/Image/Rupin.jpg').default,
+    imgSrc: require('@site/src/components/Image/counter.jpg').default,
     description: (
       <>
-        月火水木金<br></br>
-        午後1時～午後５時<br></br>
-        午後7時～午後11時（予約）<br></br>
+        月・水・木・金・土<br></br>
+        午後12時～午後５時<br></br>
+        午後6時30分～午後10時30分（予約）<br></br>
         <br></br>
-        土日・祝日<br></br>
-        午前10時～午後５時（予約・レッスン）<br></br>
+        日・火<br></br>
+        定休日<br></br>
       </>
     ),
   },
   {
     title: '営業案内',
-    imgSrc: require('@site/src/components/Image/Table.jpg').default,
+    imgSrc: require('@site/src/components/Image/longchair.jpg').default,
     description: (
       <>
         カラオケ歌い放題（1,200円）<br></br>
-        コーヒー・お茶<br></br>
-        お菓子付き
+        コーヒー・お菓子付き<br></br>
       </>
     ),
   },
   {
     title: '店舗イベント情報',
-    imgSrc: require('@site/src/components/Image/Chair.jpg').default,
+    imgSrc: require('@site/src/components/Image/event.jpg').default,
     description: (
       <>
-        カラオケ大会・歌手イベントなど<br></br>
-        📌　イベント情報は店にお知らせ一覧をご覧ください。
+        📌　年に数回歌手のキャンペン
+        📌　年１発表会
       </>
     ),
   },
