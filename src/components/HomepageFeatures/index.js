@@ -32,8 +32,8 @@ const FeatureList = [
     imgSrc: require('@site/src/components/Image/event.jpg').default,
     description: (
       <>
-        📌　年に数回歌手のキャンペン
-        📌　年１発表会
+        📌　年に数回歌手のキャンペン <br></br>
+        📌　年１発表会<br></br>
       </>
     ),
   },
