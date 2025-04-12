@@ -103,7 +103,11 @@ const config = {
             title: 'その他',
             items: [
               {
-                label: 'カラオケ　喫茶ルパン',
+                label: 'カラオケ　喫茶ルパン店',
+                to: 'https://daneecool.github.io/rupin.github.io/',
+              },
+              {
+                label: 'カラオケ　喫茶ルパン　マップ',
                 to: 'https://www.google.com/maps?q=〒851-0121 長崎県長崎市宿町２０−３',
               },
               {
